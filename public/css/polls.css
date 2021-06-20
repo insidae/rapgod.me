@@ -1,17 +1,17 @@
 /* polls */
-#pool-main {
+#wrapper {
   width: 100%;
 }
 
-#pool-main p {
+#wrapper p {
   padding: 1em 0;
 }
 
-#pool-main ul {
+#wrapper ul {
   margin-bottom: 20px;
 }
 
-#pool-main #poll-container li {
+#wrapper #poll-container li {
   display: grid;
   grid-template-columns: [s] 2fr [m] 1fr [e];
   grid-template-rows: [t] 1fr [b] 1fr [e];
@@ -19,11 +19,11 @@
   margin: 0.5em auto;
   padding: 0.5em 1em;
   width: calc(100vw - 40px);
-  background-color: var(--enabled);
+  border: 0.5vw solid var(--blue);
   border-radius: 8px;
 }
 
-#pool-main .title {
+#wrapper .title {
   text-align: left;
   grid-column: s/m;
   grid-row: t/b;
@@ -33,16 +33,16 @@
   font-size: 18px;
 }
 
-#pool-main .date {
+#wrapper .date {
   grid-column: s/m;
   grid-row: b/e;
   text-align: left;
   text-transform: lowercase;
-  color: rgba(0, 0, 0, 0.5);
+  color: white;
   font-size: 14px;
 }
 
-#pool-main .vote-btn {
+#wrapper .vote-btn {
   grid-column: m/e;
   grid-row: 1/-1;
   justify-self: start;
@@ -51,13 +51,13 @@
   height: 35px;
   text-decoration: none;
   text-align: center;
-  color: black;
-  background-color: wheat;
+  color: #ffffff;
+  background-color: #333333;
   border-radius: 8px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-#pool-main .delete-btn {
+#wrapper .delete-btn {
   grid-row: 1/-1;
   grid-column: m/e;
   align-self: center;
@@ -71,7 +71,7 @@
   cursor: pointer;
 }
 
-#pool-main #create {
+#wrapper #create {
   position: relative;
   text-decoration: none;
   color: black;
@@ -80,7 +80,7 @@
   padding: 0.3em 0.7em;
   width: 300px;
   height: 40px;
-  background-color: var(--submit-button);
+  background-color: var(--blue);
   cursor: pointer;
   border-radius: 8px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);

@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "montserratregular";
-  src: url("https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2");
+  font-family: "Source Code Pro";
+  src: url("https://fonts.gstatic.com/s/sourcecodepro/v14/HI_XiYsKILxRpg3hIP6sJ7fM7PqtlsnDs-cq.woff2");
 }
 :root {
-  --rapgod-fontface: "montserratregular";
+  --rapgod-fontface: "Source Code Pro";
   --gradient: linear-gradient(90deg, red, yellow, green, blue, violet);
   --monochrome-gradient: repeating-linear-gradient(
     60deg,
@@ -16,7 +16,7 @@
   --progressbar-color: white;
   --disabled: rgb(189, 65, 65);
   --enabled: rgb(52, 168, 91);
-  --submit-button: #59edf3;
+  --blue: #59edf3;
 }
 
 /* resets browser default styling */
@@ -37,8 +37,9 @@ body {
 }
 
 body {
-  font-family: "Open Sans";
-  margin: 20px;
+  font-family: 'Source Code Pro';
+  width: 100vw;
+  height: 100vh;
 }
 
 main {
@@ -52,15 +53,21 @@ button,
 .question,
 #total-votes,
 #create {
-  font-family: var(--rapgod-fontface);
+  font-family: 'Source Code Pro';
 }
 
 h1 {
-  margin-bottom: 0.3em;
+  margin-bottom: 1.5em;
+  background-color: var(--blue);
+  padding: 2vw;
+  color: black;
+  font-weight: 100;
+  font-size: 20px;
 }
 
 h2 {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
 }
 
 .noselect {
@@ -75,7 +82,7 @@ h2 {
 
 @media only screen and (max-width: 768px) {
   body {
-    margin: 20px 0px 0px 0px;
+    margin: 0px;
   }
 
   h1,

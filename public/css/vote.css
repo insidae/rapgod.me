@@ -1,6 +1,6 @@
 /* add styles for the voting page here */
 #vote-main {
-  margin: 0 20px;
+  margin: 0px;
 }
 
 #vote-main #vote {
@@ -68,7 +68,7 @@
   font-family: var(--rapgod-fontface);
   border-radius: 8px;
   cursor: pointer;
-  background-color: var(--submit-button);
+  background-color: var(--blue);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   transform: scale(1);
   transition: box-shadow 200ms ease, transform 200ms ease;

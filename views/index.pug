@@ -10,25 +10,25 @@ html
     script(src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js")
 
   body
-    main#pool-main
+    main#wrapper
       h1 Rapgod.me Prototype
-      h2 Currently Active Polls
+      h2 Rap Suggestions
 
       if polls.length
         ul(id="poll-container")
           each poll in polls
             li(id=`poll-${poll._id}`)
-              a(class="title" href=`/poll/${poll._id}`)=`${poll.question}`
-              br
               span(class="date")=`Created on: ${new Date(poll.timestamp).toDateString()}`
               br
+              a(class="title" href=`/poll/${poll._id}`)=`${poll.question}`
+              br
               a(class="vote-btn" href=`/vote/${poll._id}`)="Go to vote"
-              input(id=`delete_${poll._id}` class="delete-btn" data-poll-id=`${poll._id}` type="button" value="Delete poll")
+              input(id=`delete_${poll._id}` class="delete-btn" data-poll-id=`${poll._id}` type="button" value="Delete rap")
 
-        a(id='create' href="/create") Create a Poll &nbsp;
+        a(id='create' href="/create") Create a new rap
       else
-        p No Polls Found!
-        a(id="create" href="/create") Create One Here
+        p No raps found
+        a(id="create" href="/create") Create a new rap
         
       template(data-styling=styling)
 
@@ -40,7 +40,7 @@ html
     for (let button of delBTN) {
       button.onclick = function() {
 
-        let confirmed = confirm('Are you sure you want to delete this poll?');
+        let confirmed = confirm('Are you sure you want to delete this rap?');
         if (!confirmed) {
           return ;
         }
@@ -55,10 +55,10 @@ html
             let pollNode = document.querySelector(`#poll-${id}`);
             pollContainer.removeChild(pollNode);
           } else {
-            alert('Failed to delete poll')
+            alert('Failed to delete rap')
           }
         }).catch(err => {
-          alert('Failed to delete poll because of error');
+          alert('Failed to delete rap because of error');
           alert(err);
         })
       }

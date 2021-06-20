@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "insidae",
+      "name": "Matt",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6715619?v=4",
+      "profile": "https://github.com/insidae",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 1,
+  "projectName": "rapgod.me",
+  "projectOwner": "Matt Thomas",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
